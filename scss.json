@@ -1,0 +1,8 @@
+{
+  "enableAutoprefixer": true,
+  "includePaths": [
+    "public/css/sass"
+    /*,
+    ".meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/"*/
+  ]
+}

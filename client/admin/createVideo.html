@@ -1,0 +1,58 @@
+<template name="createVideo">
+  <div class="large-10 medium-12 small-12 columns light-grey-bg-pattern main-content">
+    <div class="row">
+      <div class="large-10 columns">
+        <h3>Upload Video</h3>
+        {{#autoForm schema=videoFormSchema id="createVideo" type="method" meteormethod="postVideo"}}
+          <fieldset>
+            {{> afQuickField name="name"}}
+            {{> afQuickField name="description" rows=10}}
+            {{> afQuickField name="videoId" type="cfs-file" collection="videos"}}
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-default">Reset</button>
+            </div>
+          </fieldset>
+        {{/autoForm}}
+        {{fid}}
+      </div>
+    </div>
+  </div>
+</template>
+
+
+
+<template name="createVideo1">
+  <div class="large-10 medium-12 small-12 columns light-grey-bg-pattern main-content">
+    <div class="row">
+      <div class="large-10 columns">
+        <h3>Upload Video</h3>
+        <form id="createVideo" novalidate="novalidate">
+          <fieldset>
+            <div class="form-group" data-required="true">
+              <label for="aWacPg6qeqxcztd3P" class="control-label">Video Title</label>
+              <input type="text" name="name" id="aWacPg6qeqxcztd3P" required="" data-schema-key="name" maxlength="255" class="form-control">
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group" data-required="true">
+              <label for="dndhMYx88EuJ2ua8d" class="control-label">Description</label>
+              <textarea name="description" rows="10" id="dndhMYx88EuJ2ua8d" required="" data-schema-key="description" maxlength="2500" class="form-control"></textarea>
+              <span class="help-block"></span>
+            </div>
+            <div class="form-group" data-required="true">
+              <label for="daZ5a4FoyyBuWSZX3" class="control-label">Video</label>
+              <input type="file" id="file">
+              <!--<input type="file" class="cfsaf-hidden" data-cfs-collection="videos" data-schema-key="videoId">
+              <input type="text" readonly="" name="videoId" id="daZ5a4FoyyBuWSZX3" required="" placeholder="Click to upload a file or drop it here" class="cfsaf-field form-control">
+              <span class="help-block"></span>-->
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-default">Reset</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

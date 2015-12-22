@@ -1,0 +1,22 @@
+<template name="adminLayout">
+  <div class="row full-width wrapper">
+    <div class="large-12 columns content-bg">
+      <div id="top-menu">
+        <div class="row">
+          <div class="large-2 medium-4 small-12 columns top-part-no-padding">
+            <div class="logo-bg">
+              <img src="img/logo.png" alt="logo"/>
+              <i class="fi-list toggles" data-toggle="hide"></i>
+            </div>
+          </div>
+          {{> adminTopNav }}
+        </div>
+      </div>
+      <div class="row">
+        {{> adminLeftNav }}
+        {{> yield }}
+      </div>
+    </div>
+  </div>
+  {{initFoundation}}
+</template>

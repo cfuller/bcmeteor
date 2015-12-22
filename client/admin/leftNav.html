@@ -1,0 +1,39 @@
+<template name="adminLeftNav">
+  <div class="no-padding">
+    <div class="large-2 medium-12 small-12 columns">
+      <ul class="side-nav">
+        <li class="active"><a href="{{pathFor 'admin'}}"><i class="fi-compass"></i>Dashboard</a></li>
+        <li><a href="{{pathFor 'createVideo'}}"><i class="fi-video"></i>New Video</a></li>
+        <li><a href="profile.html"><i class="fi-torso"></i>Profile</a></li>
+        <li><a href="staff.html"><i class="fi-torsos-all"></i>Staff</a></li>
+        <li>
+          <ul>
+            <li>
+              <dl class="accordion" data-accordion="myAccordionGroup">
+                <dd>
+                  <a href="#panel1c"><i class="flaticon-forms"></i>Components</a>
+                  <div id="panel1c" class="content">
+                    <ul>
+                      <li>
+                        <a href="general.html">General</a>
+                      </li>
+                      <li>
+                        <a href="wizard.html">Wizard</a>
+                      </li>
+                      <li>
+                        <a href="editor.html">Wysiwug Editor</a>
+                      </li>
+                    </ul>
+                  </div>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </li>
+        <li><a href="login.html"><i class="flaticon-incoming4"></i>Login</a></li>
+        <li><a href="register.html"><i class="flaticon-add58"></i>Register</a></li>
+        <li><a href="pricing.html"><i class="flaticon-businessman63"></i>Pricing</a></li>
+      </ul>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,23 @@
+<template name="admin">
+  {{> videoModal }}
+  <div class="large-10 medium-12 small-12 columns light-grey-bg-pattern">
+    <div class="row">
+      <div class="large-10 columns">
+        <div class="page-name">
+          <h3 class="left">Dashboard</h3>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="custom-panel radius">
+      <div class="custom-panel-heading">
+        <h4 class="left">Videos</h4>
+        {{> reactiveTableFilter id="videoFilter" label="Filter" }}
+        <div class="clearfix"></div>
+        <div class="custom-panel-body">
+          {{> reactiveTable collection=videos settings=tableSettings}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

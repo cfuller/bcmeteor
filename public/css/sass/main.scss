@@ -1,0 +1,204 @@
+//Variable Overrides
+$font-family-sans-serif: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$input-border-radius: 20px;
+
+//Main Foundation styles
+@import "../../../.meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/foundation";
+
+body {
+  background: #f3f3f3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+  color: #656C70 !important;
+}
+
+#vjs_video_1 {
+  min-height: 35em;
+}
+
+/** ADMIN LAYOUT **/
+
+a:hover, .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
+  color: #008CBA;
+}
+
+.row.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.no-padding .columns {
+  padding: 0px;
+}
+
+.page-name {
+  margin-bottom: 10px;
+  margin-top: 24px;
+}
+
+.toggles {
+  font-size: 1.3rem;
+  color: #fff;
+  display: none;
+  margin-left: 5px;
+  position: relative;
+}
+
+.toggles:hover {
+  cursor: pointer;
+}
+
+@media all and (max-width:64em) {
+  .toggles {
+    font-size: 1.3rem;
+    color: #fff;
+    display: inline !important;
+  }
+
+  .side-nav {
+    display: none;
+  }
+}
+
+.search-text {
+  background: #1E202B!important;
+  border: 1px solid #1E202B!important;
+  text-align: left;
+  margin-top: 7px !important;
+  color: #fff !important;
+}
+
+.logo-bg {
+  background-color: #008CBA;
+  min-height: 70px;
+  padding-top: 10px;
+}
+
+.top-part-no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.top-menu {
+  background-color: #2d2f3b;
+  min-height: 70px;
+  padding-top: 10px;
+}
+
+.power-off {
+  font-size: 2rem;
+  top: 7px;
+  position: relative;
+  border-left: 1px solid #746E6E;
+  padding-left: 18px;
+}
+
+.side-nav {
+  border-right: 1px solid #E6E0E6;
+  padding-bottom: 0px;
+}
+
+.side-nav > li > ul {
+  margin-left: 0px;
+}
+
+
+.side-nav .accordion dd > a {
+  background: #FFFFFF;
+  color: #656C70;
+  font-family: 'Roboto', 'sans-serif';
+  padding: 0px;
+}
+
+.side-nav {
+  background: #fff;
+}
+
+.side-nav li {
+  list-style: none;
+  & i {
+    margin-left: 15px;
+    padding-right: 5px;
+  }
+}
+
+.side-nav > li {
+  padding: 10px;
+  border-bottom: 1px solid #ebeaeb;
+  vertical-align: middle;
+}
+
+.side-nav li a:not(.button) {
+  color: #444;
+}
+
+.side-nav .active {
+  color: #008CBA;
+}
+
+.side-nav li.active > a:first-child:not(.button) {
+  color: #008CBA;
+  font-weight: bold;
+  font-family: 'Roboto', 'sans-serif';
+}
+
+@media all and (max-width:1025px) {
+  .toggles {
+    font-size: 1.3rem;
+    color: #fff;
+    display: inline !important;
+  }
+
+  .side-nav {
+    display: none;
+  }
+}
+
+@media all and (min-width:1026px) {
+  .side-nav {
+    display: block !important;
+  }
+}
+
+.main-content {
+  padding-top: 1em;
+}
+
+.custom-panel {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e1e1;
+  border-top: 0px;
+  margin-top: 15px;
+}
+
+.custom-panel-heading {
+  padding: 10px;
+  background: rgba(90,90,90,0.1);
+}
+
+.custom-panel-body {
+  background: #fff;
+  padding: 10px;
+}
+
+#videoFilter {
+  float: right;
+}
+
+.reactive-table {
+  width: 100%;
+  & th.description {
+    width: 37em;
+  }
+}
+
+/** LOGIN **/
+.login-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 8em 0;
+  padding: 40px 20px 0 20px;
+}
