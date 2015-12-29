@@ -1,0 +1,28 @@
+<template name="viewLog">
+  <table>
+    <tr>
+      <th>Level</th>
+      <th>Message</th>
+      <th>Action</th>
+      <th>Entity</th>
+      <th>Entity Type</th>
+      <th>Status</th>
+      <th>Time</th>
+    </tr>
+    {{#each messages}}
+      {{> logMessage }}
+    {{/each}}
+  </table>
+</template>
+
+<template name="logMessage">
+    <tr>
+      <td>{{level}}</td>
+      <td>{{message}}</td>
+      <td>{{data.action}}</td>
+      <td>{{data.entity}}</td>
+      <td>{{data.entityType}}</td>
+      <td>{{data.status}}</td>
+      <td>{{time}}</td>
+    </tr>
+</template>

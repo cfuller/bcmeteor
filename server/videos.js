@@ -36,5 +36,9 @@ Meteor.methods({
     console.log(obj.data.url);
     var url = obj.data.url.replace('https://www.dropbox.com/', 'https://dl.dropboxusercontent.com/')
     return url;
+  },
+  BCLogCallback: function(data) {
+    var time = Date.now();
+    LogMessages.insert({level: 'Info', message: 'Brightcove video updated', data: data, time: time});
   }
 });

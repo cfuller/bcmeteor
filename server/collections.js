@@ -42,3 +42,13 @@ VideoFiles.on('uploaded', function (fileObj) {
     }
   });
 });
+
+LogMessages = new Meteor.Collection('log');
+
+/**
+ PUBS
+**/
+
+Meteor.publish('log', function() {
+  return LogMessages.find();
+});

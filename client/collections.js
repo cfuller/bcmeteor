@@ -12,3 +12,5 @@ VideoFiles.allow({
   },
   fetch: null
 });
+
+LogMessages = new Meteor.Collection('log');
