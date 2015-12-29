@@ -32,8 +32,6 @@ Meteor.methods({
       headers: {'Authorization': 'Bearer ' + process.env.DROPBOX_TOKEN}
     };
     var obj = HTTP.call('POST', 'https://api.dropboxapi.com/1/shares/auto/' + path + '?short_url=false', options);
-    console.log(obj);
-    console.log(obj.data.url);
     var url = obj.data.url.replace('https://www.dropbox.com/', 'https://dl.dropboxusercontent.com/')
     return url;
   },

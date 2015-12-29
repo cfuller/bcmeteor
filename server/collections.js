@@ -34,9 +34,7 @@ VideoFiles.on('uploaded', function (fileObj) {
       if (file.url() !== null) {
         console.log(file.copies.files.key);
         var link = Meteor.call('getDropboxLink', file.copies.files.key);
-        console.log(file.bc_id);
-        console.log(link);
-        var opts = {master: {url: link}};
+        var opts = {master: {url: link}, callbacks: ["http://104.236.106.137:3000/api/bclogcallback"]};
         Meteor.call('ingestBrightcoveVideo', file.bc_id, opts);
       }
     }
